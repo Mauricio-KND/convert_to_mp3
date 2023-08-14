@@ -24,17 +24,25 @@ A basic Python script that converts FLAC audio files to MP3 format while preserv
 
    ```bash
    git clone https://github.com/Mauricio-KND/flac-mp3_converter.git
+   
    cd flac-mp3-converter
 
-2. Set up a virtual environment (optional but recommended):
+2. Set up a virtual environment named 'venv' (optional but recommended):
 
    ```bash
    python3 -m venv venv
-   
-   # Windows: venv\Scripts\activate
-   # macOS or Linux: source venv/bin/activate
 
-3. Install the required libraries:
+3. Activate the virtual environment:
+
+   ```bash
+   # Windows
+   venv\Scripts\activate
+
+   # macOS or Linux
+   source venv/bin/activate
+
+
+4. Install the required libraries:
 
    ```bash
    pip install pydub mutagen
