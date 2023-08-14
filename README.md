@@ -71,7 +71,7 @@ A Python library for handling audio metadata. It allows to read and write metada
 
 - The script finds all FLAC files present in the "file_to_convert" folder and converts them to MP3 format.
 - The converted MP3 files will be saved in the "converted_file" folder with the same names as the original FLAC files (except for the extension).
-- Make sure to activate the virtual environment before running the script to avoid conflicts with system-wide Python packages.
+- Make sure to activate the virtual environment before running the script. By using a virtual environment, you ensure that the dependencies you install and the program you run are isolated from your system-wide Python environment. This helps prevent conflicts between different projects and makes it easier to manage your project's dependencies.
 
 ## Contributing
 
