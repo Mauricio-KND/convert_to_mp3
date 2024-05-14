@@ -2,8 +2,6 @@
 
 A basic Python script that converts FLAC audio files to MP3 format while preserving their metadata. The script uses the `pydub` library for audio conversion and the `mutagen` library for metadata handling.
 
-This code presents a basic tkinter-based user interface where the user can select an MKV file for conversion. The convert_to_mp4 function handles the conversion using the `ffmpeg-python` library. The resulting MP4 file will have the same name as the input MKV file with the .mp4 extension.
-
 This is a starting point. add error handling, progress tracking, and more user-friendly features to the program.
 
 ## Table of Contents
