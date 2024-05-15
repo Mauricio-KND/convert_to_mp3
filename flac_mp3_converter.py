@@ -24,6 +24,10 @@ if __name__ == "__main__":
     input_folder = "file_to_convert"
     output_folder = "converted_file"
 
+    # Create the output directory if it doesn't exist
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+
     for filename in os.listdir(input_folder):
         if filename.endswith(".flac"):
             input_file = os.path.join(input_folder, filename)
