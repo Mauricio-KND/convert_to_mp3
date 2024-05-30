@@ -40,7 +40,7 @@ def convert_to_mp3(input_file, output_file, input_extension, image_file=None):
             "year": metadata.get("date", [None])[0],
             "genre": metadata.get("genre", [None])[0],
         }
-    else:  # Other file types might not have tags or might handle them differently
+    else:  # Other file types might not have tags or handle them differently
         tags = {}
 
     # Get original sampling rate
@@ -53,7 +53,7 @@ def convert_to_mp3(input_file, output_file, input_extension, image_file=None):
     exported_mp3 = MP3(output_file)
     output_sampling_rate = exported_mp3.info.sample_rate
 
-    # Print the sampling rates of original and output files
+    # Print the sampling rates of the files
     print(f"Original sampling rate: {original_sampling_rate} Hz")
     print(f"Output sampling rate: {output_sampling_rate} Hz")
 
