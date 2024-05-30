@@ -1,6 +1,6 @@
-# FLAC to MP3 Converter
+# Conver to mp3
 
-A basic Python script that converts FLAC audio files to MP3 format while preserving their metadata. The script uses the `pydub` library for audio conversion and the `mutagen` library for metadata handling.
+A basic Python script that converts audio files to MP3 format while preserving their metadata. The script uses the `pydub` library for audio conversion and the `mutagen` library for metadata handling.
 
 This is a starting point. add error handling, progress tracking, and more user-friendly features to the program.
 
@@ -27,7 +27,7 @@ This is a starting point. add error handling, progress tracking, and more user-f
    ```bash
    git clone https://github.com/Mauricio-KND/flac-mp3_converter.git
    
-   cd flac-mp3-converter
+   cd convert_to_mp3
 
 2. Set up a virtual environment named 'venv' (optional but recommended):
 
@@ -55,7 +55,7 @@ This is a starting point. add error handling, progress tracking, and more user-f
 2. Run the script:
 
    ```bash
-   python flac_mp3_converter.py
+   python convert_to_mp3.py
 
 ## Libraries Used
 
