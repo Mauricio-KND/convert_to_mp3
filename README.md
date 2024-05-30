@@ -20,6 +20,7 @@ This is a starting point. Add error handling, progress tracking, and more user-f
 - Converts WAV files to MP3 format while preserving metadata.
 - Processes several FLAC/WAVS files in the input folder.
 - Converts to MP3 format at 320 kbps bitrate.
+- Keeps the sampling rate of the input file.
 
 ## Installation
 
