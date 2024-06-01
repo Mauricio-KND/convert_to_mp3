@@ -4,7 +4,7 @@ from mutagen.flac import FLAC
 from mutagen.mp3 import MP3
 from mutagen.id3 import APIC, ID3, error
 
-script_version = "1.0.0"
+script_version = "1.0.1"
 
 def attach_cover_art(mp3_file, image_file):
     mp3 = MP3(mp3_file, ID3=ID3)

@@ -21,6 +21,8 @@ This is a starting point. Add error handling, progress tracking, and more user-f
 - Processes several FLAC/WAVS files in the input folder.
 - Converts to MP3 format at 320 kbps bitrate.
 - Keeps the sampling rate of the input file.
+- Attaches cover art (JPEG or PNG) to MP3 files if an image file with the same base name is found.
+- Prints the original and output sampling rates for verification.
 
 ## Installation
 
@@ -48,7 +50,7 @@ This is a starting point. Add error handling, progress tracking, and more user-f
 4. Install the required libraries:
 
    ```bash
-   pip install pydub mutagen
+   pip install -r requirements.txt
 
 ## Usage
 
@@ -78,6 +80,10 @@ This is a starting point. Add error handling, progress tracking, and more user-f
 ## Contributing
 
    Contributions are welcome! If you have suggestions, improvements, or bug fixes, feel free to open an issue or a pull request in the GitHub repository.
+
+## Script Version
+
+   Version: 1.0.1
 
 ## License
 
