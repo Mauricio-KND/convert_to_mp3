@@ -66,8 +66,8 @@ def convert_to_mp3(input_file, output_file, input_extension, image_file=None):
 
 if __name__ == "__main__":
     print(f"Audio file conversion script v{script_version}")
-    input_folder = "file_to_convert"
-    output_folder = "converted_file"
+    input_folder = "files_to_convert"
+    output_folder = "converted_files"
 
     # Make sure the output directory exists
     if not os.path.exists(output_folder):
