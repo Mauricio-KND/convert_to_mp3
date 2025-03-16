@@ -1,6 +1,6 @@
 # Convert to mp3
 
-A basic Python script that converts audio files to MP3 format while preserving their metadata. The script uses the `pydub` library for audio conversion and the `mutagen` library for metadata handling.
+A basic Python script that converts lossless audio files to MP3 format while preserving their metadata. The script uses the `pydub` library for audio conversion and the `mutagen` library for metadata handling.
 
 This is a starting point.
 
