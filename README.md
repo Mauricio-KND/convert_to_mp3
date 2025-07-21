@@ -18,7 +18,7 @@ This is a starting point.
 
 - Converts FLAC files to MP3 format while preserving metadata.
 - Converts WAV files to MP3 format while preserving metadata.
-- Processes several FLAC/WAVS files in the input folder.
+- Processes several FLAC/WAV files in the input folder.
 - Converts to MP3 format at 320 kbps bitrate.
 - Keeps the sampling rate of the input file.
 - Attaches cover art (JPEG or PNG) to MP3 files if an image file with the same base name is found.
@@ -32,16 +32,18 @@ This is a starting point.
    git clone https://github.com/Mauricio-KND/flac-mp3_converter.git
    
    cd convert_to_mp3
+   ```
 
 2. Set up a virtual environment named 'venv' (recommended):
 
    ```bash
-   # Use system Python 3.9+ for compatibility with pydub
-   # On macOS, you can use the system Python:
-   /usr/bin/python3 -m venv venv
+   # Use Python 3.10 for compatibility with pydub
+   # On Ubuntu/Debian systems:
+   /usr/bin/python3.10 -m venv venv
    
    # Or if you have Python 3.9-3.12 available:
-   python3 -m venv venv
+   python3.10 -m venv venv
+   ```
 
 3. Activate the virtual environment:
 
@@ -51,11 +53,13 @@ This is a starting point.
 
    # macOS or Linux
    source venv/bin/activate
+   ```
 
 4. Install the required libraries:
 
    ```bash
    pip install -r requirements.txt
+   ```
 
 5. Install FFmpeg (required for audio processing):
 
@@ -68,41 +72,63 @@ This is a starting point.
    
    # Windows (using Chocolatey)
    choco install ffmpeg
+   ```
 
 ## Usage
 
-1. Place your FLAC audio files in the "files_to_convert" folder
+1. Place your FLAC or WAV audio files in the "files_to_convert" folder
 
-2. Run the script:
+2. Run the script using one of these methods:
 
+   **Option 1 (Recommended):** Use the convenience script:
    ```bash
+   ./run_converter.sh
+   ```
+
+   **Option 2:** Manually activate the virtual environment and run:
+   ```bash
+   source venv/bin/activate
    python convert_to_mp3.py
+   ```
+
+3. The converted MP3 files will be saved in the "converted_files" folder
 
 ## Libraries Used
 
-   ### pydub
+### pydub
 
-   A Python library for audio processing. It provides a simple and convenient interface for working with audio files, including audio format conversion, audio slicing, volume adjustment, and more. In this project, we use pydub to convert the FLAC audio files to MP3 format.
+A Python library for audio processing. It provides a simple and convenient interface for working with audio files, including audio format conversion, audio slicing, volume adjustment, and more. In this project, we use pydub to convert the FLAC and WAV audio files to MP3 format.
 
-   ### mutagen
+### mutagen
 
-   A Python library for handling audio metadata. It allows to read and write metadata tags in various audio file formats, including FLAC and MP3. In this project, we use mutagen to extract metadata from the original FLAC files and apply them to the converted MP3 files.
+A Python library for handling audio metadata. It allows to read and write metadata tags in various audio file formats, including FLAC and MP3. In this project, we use mutagen to extract metadata from the original FLAC files and apply them to the converted MP3 files.
 
 ## Notes
 
-   - **Python Compatibility**: This script works best with Python 3.9-3.12. Python 3.13+ has compatibility issues with the current version of pydub due to the removal of the `audioop` module.
-   - The script finds all FLAC or WAV files in the "files_to_convert" folder and converts them to MP3 format.
-   - The converted MP3 files will be saved in the "converted_files" folder with the same names as the original FLAC files (except for the extension).
-   - FFmpeg is required for audio processing. The script will not work without it.
-   - Make sure to activate the virtual environment before running the script. Using a virtual environment ensures that the dependencies you install and the program you run are isolated from your system-wide Python environment. This helps prevent conflicts between different projects and makes it easier to manage your project's dependencies.
+- **Python Compatibility**: This script requires Python 3.9-3.12. Python 3.13+ has compatibility issues with the current version of pydub due to the removal of the `audioop` module. The virtual environment has been configured to use Python 3.10 for optimal compatibility.
+- **Dependencies**: The requirements.txt file specifies exact versions (pydub==0.25.1, mutagen==1.47.0) to ensure compatibility.
+- The script finds all FLAC or WAV files in the "files_to_convert" folder and converts them to MP3 format.
+- The converted MP3 files will be saved in the "converted_files" folder with the same names as the original files (except for the extension).
+- FFmpeg is required for audio processing. The script will not work without it.
+- A convenience script (`run_converter.sh`) is provided that automatically activates the virtual environment before running the converter.
+- Make sure to use the virtual environment. Using a virtual environment ensures that the dependencies you install and the program you run are isolated from your system-wide Python environment. This helps prevent conflicts between different projects and makes it easier to manage your project's dependencies.
+
+## Troubleshooting
+
+If you encounter issues:
+
+1. **ModuleNotFoundError**: Make sure the virtual environment is activated before running the script
+2. **Python 3.13 compatibility issues**: The virtual environment is configured to use Python 3.10 to avoid audioop module issues
+3. **FFmpeg not found**: Install FFmpeg using the instructions in the Installation section
+4. **Permission errors**: Make sure the run_converter.sh script is executable: `chmod +x run_converter.sh`
 
 ## Contributing
 
-   Contributions are welcome! If you have suggestions, improvements, or bug fixes, feel free to open an issue or a pull request in the GitHub repository.
+Contributions are welcome! If you have suggestions, improvements, or bug fixes, feel free to open an issue or a pull request in the GitHub repository.
 
 ## Script Version
 
-   Version: 1.0.1
+Version: 1.0.1
 
 ## License
 
